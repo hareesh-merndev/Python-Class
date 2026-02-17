@@ -1,15 +1,14 @@
+# fees calculator
 stype = input("Enter Student Type (MSDS, MSH, MGSD): ").strip().lower()
 if stype not in ["msds", "msh", "mgsd"]:
     print("Invalid student type entered. Please enter MSDS, MSH, or MGSD.")
     exit()
-
 while True:
     try:
         tuition = float(input("Enter Tuition Fee: "))
         break
     except:
         print("Invalid input! Please enter a numeric value.")
-
 if stype == "msds":
     while True:
         try:
@@ -26,18 +25,21 @@ elif stype in ["msh", "mgsd"]:
         except:
             print("Invalid input! Please enter a numeric value.")
     college = 0
-
 if stype == "msds":
     total = tuition + college
 elif stype == "msh":
     total = tuition + hostel
-else:  # mgsd
+else: 
     total = 1.5 * tuition + hostel
-
 print(f"Total Fee for {stype.upper()}: {total}")
+# result:Enter Student Type (MSDS, MSH, MGSD): msds
+#        Enter Tuition Fee: 6000
+#        Enter College Fee: 7000
+#        Total Fee for MSDS: 13000.0
+
 
 # account balance
-account_balance=int(input('enter the account balance='))
+account_balance=50000
 withdrawl_amount=int(input('enter the withdrawl amount='))
 if (withdrawl_amount>account_balance):
     print('insufficiant fund')
@@ -50,3 +52,17 @@ else :
 # enter the withdrawl amount=5500
 # insufficiant fund
 
+# atm withdrawl
+account_pin=9486
+x=int(input('enter the pin='))
+if(x==account_pin):
+    print('pin is correct')
+    withdrawl_amount=int(input('enter the withdrawl amount='))
+    if (withdrawl_amount>account_balance):
+        print('insufficiant fund')
+    elif (withdrawl_amount>10000):
+        print('limit exceeded')
+    else :
+        print('allow withdrawl')
+else:
+    print('wrong pin')
