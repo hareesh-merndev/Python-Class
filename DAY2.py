@@ -77,4 +77,31 @@ else:
 # allow withdrawl
 # the balance amount is=46000
 
+# booking tickets
+age=int(input('enter your age='))
+show=input('enter the show time(mng,eve)=')
+child=150
+adult=250
+senior=200
+if (age<=4):
+    print('free entry')
+elif (age>=5) or (age<=16):
+    if (show == "mng"):
+        child_mng=0.5*child
+        print('the ticket price is=',child_mng)
+    else:
+        print('the ticket price is=',child)
+
+elif (age>=17) or (age<=59):
+    if (show == "mng"):
+        adult_mng=0.5*adult
+        print('the ticket price is=',adult_mng)
+    else:
+        print('the ticket price is=',adult)
+else:
+    if (show == "mng"):
+        senior_mng=0.5*senior
+        print('the ticket price is=',senior_mng)
+    else:
+        print('the ticket price is=',senior)
 
