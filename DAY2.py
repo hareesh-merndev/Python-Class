@@ -35,3 +35,18 @@ else:  # mgsd
     total = 1.5 * tuition + hostel
 
 print(f"Total Fee for {stype.upper()}: {total}")
+
+# account balance
+account_balance=int(input('enter the account balance='))
+withdrawl_amount=int(input('enter the withdrawl amount='))
+if (withdrawl_amount>account_balance):
+    print('insufficiant fund')
+elif (withdrawl_amount>10000):
+    print('limit exceeded')
+else :
+    print('allow withdrawl')
+# result
+# enter the account balance=5000
+# enter the withdrawl amount=5500
+# insufficiant fund
+
