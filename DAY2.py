@@ -146,3 +146,51 @@ for i in range(1,10):
 # reverse
 for i in range(5,0,-1):
     print("*"*i)
+
+# while loop
+odd_sum=0
+i=1
+while i<100:
+    print(i)
+    odd_sum=odd_sum+i
+    i=i+2
+# for even
+even_sum=0
+i=2
+while i<100:
+    print(i)
+    even_sum=even_sum+i
+    i=i+2
+
+# foe while stars
+i=1
+while i<6:
+    print("*"*i)
+    i=i+1
+
+# # for reverse
+i = 5
+while i>0:
+    print('*' * i)
+    i =i-1
+# while lopp for 5 multiplictaion
+i = 5
+while i<55:
+    print(i)
+    i =i+5
+
+# bus seat booking
+seats=10
+booked_seat=[]
+while seats>0:
+    seat_number=int(input('enter your seat(1-10):'))
+    if seat_number>seats or seat_number<=0:
+        print('seat not available')
+    else:
+        name=input('enter your name:')
+        booked_seat.append((seat_number,name))
+        print(f"seat {seat_number} booked for {name}")
+        seats=seats-1
+if seats==0:
+    print('all the seats are bookes')
+
