@@ -85,23 +85,64 @@ adult=250
 senior=200
 if (age<=4):
     print('free entry')
-elif (age>=5) or (age<=16):
+elif (age>=5) and (age<=16):
     if (show == "mng"):
-        child_mng=0.5*child
+        child_mng=child-50
         print('the ticket price is=',child_mng)
     else:
         print('the ticket price is=',child)
 
-elif (age>=17) or (age<=59):
+elif (age>=17) and (age<=59):
     if (show == "mng"):
-        adult_mng=0.5*adult
+        adult_mng=adult-50
         print('the ticket price is=',adult_mng)
     else:
         print('the ticket price is=',adult)
 else:
     if (show == "mng"):
-        senior_mng=0.5*senior
+        senior_mng=senior-50
         print('the ticket price is=',senior_mng)
     else:
         print('the ticket price is=',senior)
+# result:
+# enter your age=21
+# enter the show time(mng,eve)=mng
+# the ticket price is= 200.0
 
+# loop
+odd_sum=0
+for i in range(1,100,2):
+    print(i)
+    odd_sum=odd_sum+i
+print('the number of odd sum is:',odd_sum)
+# the number of odd sum is=2500
+# for even
+even_sum=0
+for i in range(0,100,2):
+    print(i)
+    even_sum=even_sum+i
+print('the sum of even number is=',even_sum)
+# the sum of even number is= 2450
+# for 5 tables
+for i in range(5,55,5):
+    print(i)
+
+# marks calculation
+english=int(input('enter the mark of english:'))
+tamil=int(input('enter the mark of tamil:'))
+maths=int(input('enter the mark of maths:'))
+science=int(input('enter the mark of science:'))
+social=int(input('enter the mark of social:'))
+total_marks=english+tamil+maths+science+social
+print('the total marks is=',total_marks)
+average=total_marks/5
+print('the average percentage is =',average)
+
+# print 5 stars
+
+for i in range(1,10):
+    print("*"*i)
+
+# reverse
+for i in range(5,0,-1):
+    print("*"*i)
