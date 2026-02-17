@@ -62,7 +62,19 @@ if(x==account_pin):
         print('insufficiant fund')
     elif (withdrawl_amount>10000):
         print('limit exceeded')
+    elif (withdrawl_amount<=0):
+        print('invalid amount')
     else :
         print('allow withdrawl')
+        balance_amount=account_balance-withdrawl_amount
+        print('the balance amount is=',balance_amount)
 else:
     print('wrong pin')
+# result
+# enter the pin=9486
+# pin is correct
+# enter the withdrawl amount=4000
+# allow withdrawl
+# the balance amount is=46000
+
+
