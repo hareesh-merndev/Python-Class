@@ -1,8 +1,8 @@
 # fibonacci series
-a, b = 0, 1
-while a < 10:
-    print(a, end=' ')
-    a, b = b, a + b
+# a, b = 0, 1
+# while a < 10:
+#     print(a, end=' ')
+#     a, b = b, a + b
 # # for leet
 # class Solution:
 #     def fib(self, n: int) -> int:
@@ -18,3 +18,7 @@ while a < 10:
 #         return b
 
         
+a, b, c = 0, 1, 1
+while a < 30:
+    print(a, end=' ')
+    a, b, c = b, c, a + b + c
